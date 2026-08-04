@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>jxc-common</module>
+        <module>jxc-domain</module>
     </modules>
 
 
@@ -35,35 +36,35 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- �ڲ�ģ�� -->
+            <!-- 内部模块 -->
             <dependency>
-                <groupId>com.example</groupId>
-                <artifactId>service-jxc-common</artifactId>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>jxc-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.example</groupId>
-                <artifactId>service-jxc-domain</artifactId>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>jxc-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.example</groupId>
-                <artifactId>service-jxc-infrastructure</artifactId>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>jxc-infrastructure</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.example</groupId>
-                <artifactId>service-jxc-application</artifactId>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>jxc-application</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.example</groupId>
-                <artifactId>service-jxc-facade</artifactId>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>jxc-facade</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.example</groupId>
-                <artifactId>service-jxc-api</artifactId>
+                <groupId>com.github.liyibo1110</groupId>
+                <artifactId>jxc-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
