@@ -7,6 +7,8 @@ import com.github.liyibo1110.jxc.core.domain.aggregate.distribution.entity.Distr
 import com.github.liyibo1110.jxc.core.domain.aggregate.distribution.entity.DistributionOrderItem;
 import com.github.liyibo1110.jxc.core.domain.aggregate.distribution.repository.DistributionOrderRepository;
 import com.github.liyibo1110.jxc.core.domain.aggregate.distribution.service.DistributionDomainService;
+import com.github.liyibo1110.jxc.gateway.InventoryGateway;
+import com.github.liyibo1110.jxc.gateway.dto.SyncOrderCommand;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

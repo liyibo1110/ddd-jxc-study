@@ -1,5 +1,8 @@
 package com.github.liyibo1110.jxc.core.domain.aggregate.shop.service;
 
+import com.github.liyibo1110.jxc.core.domain.aggregate.shop.entity.ShopInfoEntity;
+import com.github.liyibo1110.jxc.gateway.dto.ShopInfo;
+
 import java.util.List;
 
 /**

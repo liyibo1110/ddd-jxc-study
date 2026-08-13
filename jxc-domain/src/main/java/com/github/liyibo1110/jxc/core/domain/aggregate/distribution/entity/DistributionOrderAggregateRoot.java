@@ -1,6 +1,7 @@
 package com.github.liyibo1110.jxc.core.domain.aggregate.distribution.entity;
 
 import com.github.liyibo1110.jxc.common.command.CreateDistributionOrderCommand;
+import com.github.liyibo1110.jxc.common.command.UpdateShippingCommand;
 import com.github.liyibo1110.jxc.common.exception.BizException;
 import com.github.liyibo1110.jxc.ddd.AggregateRoot;
 import lombok.AccessLevel;
@@ -114,6 +115,21 @@ public class DistributionOrderAggregateRoot implements AggregateRoot<Long> {
                 .findFirst()
                 .orElseThrow(() -> new BizException("配货单明细不存在：" + itemId));
         target.updateShippingNum(shippingNum);
+    }
+
+    /**
+     * 批量更新发货数量（供应商发货时使用）
+     */
+    public void updateItemsShippingNum(List<UpdateShippingCommand.ShippingItem> shippingList) {
+        if (shippingList == null || shippingList.isEmpty())
+            return;
+
+        for (UpdateShippingCommand.ShippingItem shippingItem : shippingList)
+            updateItemShippingNum(shippingItem.getItemId(), shippingItem.getShippingNum());
+
+        // 更新主表状态为已发货
+        this.status = "shipped";
+        this.shippingTime = LocalDateTime.now();
     }
 
     /**
