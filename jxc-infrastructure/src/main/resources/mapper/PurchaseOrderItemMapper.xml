@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.jxc.infrastructure.persistence.mapper.PurchaseOrderItemMapper">
+
+    <!-- 按订货单id列表批量查询明细 -->
+    <select id="selectByOrderIdList" resultType="com.example.jxc.infrastructure.persistence.po.PurchaseOrderItemPO">
+        SELECT * FROM purchase_order_item WHERE is_deleted = 0
+        AND order_id IN
+        <foreach collection="orderIdList" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+
+</mapper>
