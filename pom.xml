@@ -12,6 +12,7 @@
         <module>jxc-common</module>
         <module>jxc-domain</module>
         <module>jxc-infrastructure</module>
+        <module>jxc-application</module>
     </modules>
 
 
